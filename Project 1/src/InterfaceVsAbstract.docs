@@ -1,0 +1,129 @@
+INTERFACE VS ABSTRACT CLASS
+
+This note is written for beginners.
+Both interface and abstract class are used when we want to create a common rule
+for multiple classes. But they are used in slightly different situations.
+
+1) SIMPLE IDEA
+
+Abstract class:
+Use an abstract class when classes are closely related and should share both
+common data and common behavior.
+
+Interface:
+Use an interface when you want to describe a common ability or action that many
+different classes can have.
+
+2) EASY REAL LIFE EXAMPLE
+
+Abstract class example:
+Animal can be an abstract class.
+Why?
+Because all animals may have common data like name or age, and common methods
+like eat() or sleep().
+But each animal may make a different sound, so sound() can be abstract.
+
+Interface example:
+Flyable can be an interface.
+Why?
+Because bird, airplane, and drone are very different things, but all can fly.
+So Flyable only describes the ability.
+
+3) MAIN DIFFERENCE
+
+Abstract class is about:
+"What something is"
+
+Interface is about:
+"What something can do"
+
+4) BEGINNER-FRIENDLY COMPARISON
+
+Abstract class:
+- A class can extend only one abstract class.
+- It can have normal methods with full body.
+- It can have abstract methods without body.
+- It can have instance variables (fields).
+- It can have constructors.
+- It is useful when child classes need shared code.
+
+Interface:
+- A class can implement multiple interfaces.
+- It is mainly used to define a contract.
+- It tells what methods must exist.
+- It is useful when unrelated classes share the same ability.
+
+5) WHEN SHOULD YOU USE ABSTRACT CLASS?
+
+Use abstract class when:
+- You want to write common code once and reuse it.
+- You want common fields like name, id, price, salary, etc.
+- You want a parent-child relationship.
+- You want some methods to be same for all child classes.
+- You want some methods to be compulsory but written differently by each child.
+
+Example:
+abstract class Payment
+
+Child classes:
+- CardPayment
+- UpiPayment
+- CashPayment
+
+Reason:
+All payments may have common details, but the payment process can differ.
+
+6) WHEN SHOULD YOU USE INTERFACE?
+
+Use interface when:
+- You want to define a rule or ability.
+- Different classes may need the same behavior.
+- The classes are not necessarily from the same family.
+- You want one class to follow multiple rules.
+
+Example:
+interface Printable
+
+Classes that can implement it:
+- Report
+- Invoice
+- PhotoDocument
+
+Reason:
+All these classes are different, but all can be printed.
+
+7) VERY IMPORTANT MEMORY TRICK
+
+Abstract class:
+Common base + shared code
+
+Interface:
+Common ability + rule
+
+8) SHORT EXAMPLE THINKING
+
+If you say:
+"All these objects are a type of Payment"
+-> abstract class makes sense
+
+If you say:
+"All these objects can be printed"
+-> interface makes sense
+
+9) FINAL CONCLUSION
+
+Use abstract class when you need:
+- inheritance
+- shared fields
+- shared methods
+- partial implementation
+
+Use interface when you need:
+- common behavior
+- flexibility
+- multiple abilities in the same class
+
+10) ONE-LINE DIFFERENCE
+
+Abstract class = shared parent with some ready-made code
+Interface = rule book that tells a class what it must do
